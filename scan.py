@@ -122,7 +122,7 @@ def set_four_points(image, points):
     # calculates the transformation matrix that maps the rectangle points to the destination points.
     matrix = cv2.getPerspectiveTransform(rectangle, destination)
 
-    # apply the perspective transformation matrix to the iamge to get the warped/ straightened image 
+    # apply the perspective transformation matrix to the image to get the warped image
     warped = cv2.warpPerspective(image, matrix, (max_width, max_height))
 
     return warped
